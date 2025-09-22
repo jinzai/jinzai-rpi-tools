@@ -1,0 +1,24 @@
+{
+  "name": "jinzai-rpi-tools",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "dev": "tsx watch src/index.ts",
+    "test": "vitest run",
+    "lint": "echo '(add eslint later)'"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "jinzai-rpi-tools": "file:",
+    "pino": "^9.11.0"
+  }
+}
