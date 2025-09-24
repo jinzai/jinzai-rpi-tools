@@ -9,7 +9,8 @@
     "build": "tsc -p .",
     "dev": "tsx watch src/index.ts",
     "test": "vitest run",
-    "lint": "echo '(add eslint later)'"
+    "lint": "echo '(add eslint later)'",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^24.5.2",
@@ -20,5 +21,17 @@
   "dependencies": {
     "jinzai-rpi-tools": "file:",
     "pino": "^9.11.0"
+  },
+  "peerDependencies": {
+    "pigpio": ">=3",
+    "serialport": "^13.0.0"
+  },
+  "peerDependenciesMeta": {
+    "serialport": {
+      "optional": true
+    },
+    "pigpio": {
+      "optional": true
+    }
   }
 }
